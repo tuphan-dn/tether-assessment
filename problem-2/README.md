@@ -27,4 +27,18 @@ sequenceDiagram
     FCM->>User Device: Incoming transaction
 ```
 
+### Block monitoring
+
+To feed data to the Notification Server, the block monitoring must observe all account with state changes and filter them by the FCM token in database.
+
+```mermaid
+sequenceDiagram
+    Block Monitoring->>Blockchain: Query new blocks
+    Blockchain->>Block Monitoring: New Blocks
+    Block Monitoring->>Database: Query addresses
+    Database->>Block Monitoring: Matched addresses
+    Block Monitoring->>Block Monitoring: Parse corresponding transaction data
+    Block Monitoring-->>Notification Server: Feed the list of addresses and their transaction data
+```
+
 ## References
