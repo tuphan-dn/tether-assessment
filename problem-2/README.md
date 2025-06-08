@@ -36,7 +36,7 @@ sequenceDiagram
     Block Monitoring->>Blockchain: Query new blocks
     Blockchain->>Block Monitoring: New Blocks
     Block Monitoring->>FCM Token Database: Query addresses
-    Database->>Block Monitoring: Matched addresses
+    FCM Token Database->>Block Monitoring: Matched addresses
     Block Monitoring-->>Block Monitoring: Parse corresponding transaction data
     Block Monitoring->>Notification Server: Feed the list of addresses and their transaction data
 ```
