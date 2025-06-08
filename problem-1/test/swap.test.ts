@@ -7,7 +7,6 @@ import {
   parseEther,
   type PublicClient,
   parseGwei,
-  trim,
 } from 'viem'
 import { mainnet } from 'viem/chains'
 import {
