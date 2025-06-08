@@ -38,7 +38,7 @@ sequenceDiagram
     Block Monitoring->>FCM Token Database: Query addresses
     FCM Token Database->>Block Monitoring: Matched addresses
     Block Monitoring-->>Block Monitoring: Parse corresponding transaction data
-    Block Monitoring->>Notification Server: Feed the list of addresses and their transaction data
+    Block Monitoring->>Notification Server: Feed the list of addresses and their incoming transaction
 ```
 
 ## References
