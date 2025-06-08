@@ -1,6 +1,4 @@
-# Tether Assessment - Task 1
-
-## Task
+# Task 1
 
 Choose one DeFi protocol on any EVM chain of your choice and create a simple javascript module with the following capabilities.
 
