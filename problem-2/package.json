@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src/index"
+    "dev": "tsx watch ./src"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "ky": "^1.8.1",
     "viem": "^2.30.6"
   }
 }

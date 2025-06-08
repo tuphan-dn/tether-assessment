@@ -98,5 +98,5 @@ const signedTx = await account.signTransaction({
 
 ## References
 
-1. https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol
-2. https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol
+1. [https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)
+2. [https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol)

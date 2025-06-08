@@ -12,6 +12,8 @@ npm test
 
 > As I understand that the problems are to test problem solving, I exclude ready-to-use solutions of using Webhooks (Alchemy), Notifications (Tatum), or Streams (QuickNode).
 
+In a wallet scope, incoming transactions usually reflect the ETH balance changes, tokens changes, and NFT ownership changes.
+
 Effectively, we monitor every new block and catch which addresses have balance changes (i.e. ETH & Tokens). After that, we query those addresses in our database to get their Firebase Cloud Messaging (FCM) tokens and send them notifications with the corresponding transaction data.
 
 ### Firebase Cloud Messaging
@@ -45,12 +47,22 @@ sequenceDiagram
 
 #### EVM
 
-Get new blocks with full transactions.
+1. Get new blocks with full transactions.
+2. Remove Contract-Creation transactions
+3. Parse Call-Contract transactions
+
+   - Get transaction's `logs`
+   - Try to fit in `Erc20TransferEvent` and `Erc1155TransferSingleEvent`. If it matches, pair the transaction `hash` with `from` address and `to` address.
+
+4. Parse Transfer-Value transactions
+   - If `value` is greater than 0, pair the transaction `hash` with `from` address and `to` address.
 
 #### TON
 
 #### Solana
 
-### Tron
+#### Tron
 
 ## References
+
+1. [https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token)
