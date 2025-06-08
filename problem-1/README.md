@@ -1,4 +1,4 @@
-# Task 1
+# Problem 1
 
 Choose one DeFi protocol on any EVM chain of your choice and create a simple javascript module with the following capabilities.
 
