@@ -23,7 +23,8 @@ sequenceDiagram
     User Device->>FCM: Auth
     FCM->>User Device: FCM Token
     User Device->>Notification Server: Record to database
-    Notification Server->>User Device: Incoming transaction
+    Notification Server-->>FCM: Incoming transaction
+    FCM->>User Device: Incoming transaction
 ```
 
 ## References
