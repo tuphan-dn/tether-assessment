@@ -59,7 +59,7 @@ describe('Swap on Uniswap V2', () => {
     )
   })
 
-  it('shoul throw', async () => {
+  it('should create a valid signedTransaction', async () => {
     const { tx } = await router.swapExactTokensForTokens({
       amountIn: parseEther('1', 'wei'),
       amountOutMin: 2000000000n, // $2,000

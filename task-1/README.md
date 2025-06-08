@@ -29,8 +29,14 @@ For example, if you were to choose to implement a lending protocol, the main rel
 ## How to run?
 
 ```bash
-npm start
+npm test
 ```
+
+The command will run the test case which show how to use the implemented `swapExactTokensForTokens`
+
+1. Call `swapExactTokensForTokens` with correct arguments and expect the returned `amounts` to be valid.
+2. Call `swapExactTokensForTokens` with extremely high `amountOutMin` and expect `UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT` error.
+3. Call `swapExactTokensForTokens` with correct arguments and manually use the `tx.data` to sign.
 
 ## Justification
 
