@@ -93,11 +93,11 @@ erDiagram
 
     TokenAccount {
         TEXT ownerAddress FK
-        TEXT tokenAccountAddress
-        PRIMARY KEY (ownerAddress, tokenAccountAddress)
+        TEXT tokenAccountAddress PK
+        TEXT mintAddress
     }
 
-    FCMToken ||--o{ TokenAccount : has
+    FCMToken ||--o{ TokenAccount : derive
 ```
 
 ## References
