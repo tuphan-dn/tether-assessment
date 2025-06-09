@@ -10,6 +10,8 @@ First, you need to prepare the environment by follow this guide [Set up your env
 - Expo CLI
 - Expo Go
 
+Then, let's start Expo
+
 ```bash
 npx expo start
 ```
