@@ -13,7 +13,7 @@ pnpm test
 
 ## Justification
 
-> As I understand that the problems are to test problem solving, I exclude ready-to-use solutions of using Webhooks (Alchemy), Notifications (Tatum), or Streams (QuickNode).
+> Since I understand that the problems are to test my problem-solving skills, I deliberately avoided out-of-the-box solutions such as Webhooks (Alchemy), Notifications (Tatum), or Streams (QuickNode).
 
 In a wallet scope, incoming transactions usually reflect the ETH balance changes, tokens changes, and NFT ownership changes.
 
