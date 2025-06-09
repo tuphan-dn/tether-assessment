@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsx ./src",
-    "dev": "tsx watch ./src/sol"
+    "test": "NODE_OPTIONS='--import=tsx' mocha -t 60000 'test/**/*.test.ts'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^22.15.30",
+    "chai": "^5.2.0",
+    "mocha": "^11.5.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
@@ -19,7 +22,6 @@
   "dependencies": {
     "@solana/spl-token": "^0.4.13",
     "@solana/web3.js": "^1.98.2",
-    "ky": "^1.8.1",
     "viem": "^2.30.6"
   }
 }
