@@ -1,5 +1,4 @@
-import { Address, decodeEventLog, Hex } from 'viem'
-import { client } from './client'
+import { Address, decodeEventLog, Hex, PublicClient } from 'viem'
 import { Erc1155TransferSingleEvent, Erc20TransferEvent } from './events'
 
 class RecordedTxs {
@@ -15,7 +14,7 @@ class RecordedTxs {
   }
 }
 
-export const watch = async (blockNumber: bigint) => {
+export const watch = async (blockNumber: bigint, client: PublicClient) => {
   const { transactions } = await client.getBlock({
     blockNumber,
     includeTransactions: true,
@@ -51,5 +50,6 @@ export const watch = async (blockNumber: bigint) => {
       // Unknown
     }
   }
+
   return transferringTxs.txs
 }

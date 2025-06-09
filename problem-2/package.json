@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch ./src"
+    "start": "tsx ./src",
+    "dev": "tsx watch ./src/sol"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,8 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
     "ky": "^1.8.1",
     "viem": "^2.30.6"
   }
