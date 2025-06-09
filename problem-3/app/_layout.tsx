@@ -1,3 +1,5 @@
+import '@/polyfill'
+
 import { Stack } from 'expo-router'
 
 export default function RootLayout() {
@@ -11,9 +13,9 @@ export default function RootLayout() {
         }}
       />
       <Stack.Screen
-        name="about"
+        name="help"
         options={{
-          headerTitle: 'About',
+          headerTitle: 'Help',
         }}
       />
     </Stack>

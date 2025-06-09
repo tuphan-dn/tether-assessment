@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Modal, Pressable, StyleSheet, View } from 'react-native'
+import { Modal, StyleSheet, View } from 'react-native'
 
 const styles = StyleSheet.create({
   overlay: {
@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
   content: {
     backgroundColor: '#ffffff',
     padding: 24,
+    margin: 16,
     borderRadius: 16,
-    elevation: 5,
   },
 })
 
@@ -30,9 +30,9 @@ export function MyModal({ open, onClose, children }: MyModalProps) {
       visible={open}
       onRequestClose={onClose}
     >
-      <Pressable style={styles.overlay} onPress={onClose}>
+      <View style={styles.overlay}>
         <View style={styles.content}>{children}</View>
-      </Pressable>
+      </View>
     </Modal>
   )
 }
