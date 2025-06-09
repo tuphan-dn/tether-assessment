@@ -22,7 +22,7 @@ npm run android
 
 `@ton/crypto`, or `NaCl` precisely, is heavily relying on NodeJs modules (i.e. `crypto`) and global variable (i.e. `Buffer`), which are not always available in Hermes engine. One way to make it possible is by using `buffer` and `expo-crypto`. However, it's really slow and impractical.
 
-An effective solution is to use `react-native-quick-crypto` and `@craftzdog/react-native-buffer` for `crypto` and `buffer` respectively. To set up, we crate a `polyfill.ts`
+An effective solution is to use `react-native-quick-crypto` and `@craftzdog/react-native-buffer` for `crypto` and `buffer` respectively. To set up, we create `polyfill.ts`.
 
 ```ts
 import { install } from 'react-native-quick-crypto'
@@ -30,7 +30,7 @@ import { install } from 'react-native-quick-crypto'
 install()
 ```
 
-Then auto run the file in `_layout.tsx`
+Then auto run the file in `_layout.tsx`.
 
 ```ts
 import '@/polyfill'
@@ -66,3 +66,4 @@ module.exports = config
 
 1. [https://www.npmjs.com/package/@ton/crypto](https://www.npmjs.com/package/@ton/crypto)
 2. [https://www.npmjs.com/package/react-native-quick-crypto](https://www.npmjs.com/package/react-native-quick-crypto)
+3. [https://www.npmjs.com/package/@craftzdog/react-native-buffer](https://www.npmjs.com/package/@craftzdog/react-native-buffer)
