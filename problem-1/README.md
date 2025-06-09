@@ -29,7 +29,8 @@ For example, if you were to choose to implement a lending protocol, the main rel
 ## How to run?
 
 ```bash
-npm test
+pnpm install
+pnpm test
 ```
 
 The command will run the test case which show how to use the implemented `swapExactTokensForTokens`

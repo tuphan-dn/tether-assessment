@@ -7,7 +7,8 @@ How would you implement real time notifications about incoming transactions in a
 To able for unit tests, we won't listen new block in realtime. Instead, we get latest block and handle the new block data. For production, we should implement a realtime block listening.
 
 ```bash
-npm test
+pnpm install
+pnpm test
 ```
 
 ## Justification

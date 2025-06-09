@@ -4,8 +4,10 @@ https://www.npmjs.com/package/@ton/crypto This module has been created by Ton Or
 
 ## How to run?
 
+First, you need to prepare the environment by follow this guide [Set up your environment](https://docs.expo.dev/get-started/set-up-your-environment/?platform=ios&device=simulated#set-up-an-ios-simulator-with-expo-go).
+
 ```bash
-npm test
+npx expo start
 ```
 
 ## Justification
