@@ -72,8 +72,6 @@ By focusing on event logs, it effective to fetch relevant transactions including
 
 There is optional RPC named `debug_traceTransaction` by which we can build a much faster solution. However, this one requires us build our own Fullnode, which seems very expensive for the test.
 
-#### TON
-
 #### Solana
 
 Different from EVM, Solana has one standardized "token contract" name SPL Token Program. By listening on this program can capturing all transactions, we can effectively parse all desired events.
@@ -102,6 +100,19 @@ erDiagram
 
     FCMToken ||--o{ TokenAccount : derive
 ```
+
+#### TON
+
+We can detect relevant messages by:
+
+1. Get all shards info and the masterchain `seqno`.
+2. Get all transactions in the shards with the latest `seqno`.
+3. Parse messages (i.e. `inMessage` and `outMessages`) in the transactions:
+
+- If `body` start `0f8a7ea5`, it is `jetton_transfer`.
+- If `value.coins`, it is `ton_transfer`.
+
+Similarly to Solana, a Ton wallet can manage multiple Jetton wallets. To offload the onchain query, we will maintain an `JettonWallet` table similar to [the `TokenAccount` table in Solana](#solana)
 
 ## References
 
