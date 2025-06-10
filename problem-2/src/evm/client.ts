@@ -8,5 +8,5 @@ export const ethClient = createPublicClient({
 
 export const tronClient = createPublicClient({
   chain: tron,
-  transport: http(),
+  transport: http('https://tron-evm-rpc.publicnode.com'),
 })

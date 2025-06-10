@@ -11,6 +11,8 @@ pnpm install
 pnpm test
 ```
 
+To inspect the API, you can read the `test` folder for details.
+
 ## Justification
 
 > Since I understand that the problems are to test my problem-solving skills, I deliberately avoided out-of-the-box solutions such as Webhooks (Alchemy), Notifications (Tatum), or Streams (QuickNode).
