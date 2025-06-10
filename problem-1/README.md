@@ -33,7 +33,7 @@ pnpm install
 pnpm test
 ```
 
-The command will run the test case which show how to use the implemented `swapExactTokensForTokens`
+The command will run a test case showing how to use the implemented `swapExactTokensForTokens`
 
 1. Call `swapExactTokensForTokens` with correct arguments and expect the returned `amounts` to be valid.
 2. Call `swapExactTokensForTokens` with extremely high `amountOutMin` and expect `UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT` error.
@@ -100,4 +100,4 @@ const signedTx = await account.signTransaction({
 ## References
 
 1. [https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol](https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Pair.sol)
-2. [https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol](https://github.com/Uniswap/v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol)
+2. [https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol)

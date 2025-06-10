@@ -120,3 +120,4 @@ Similarly to Solana, a Ton wallet can manage multiple Jetton wallets. To offload
 
 1. [https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token)
 2. [https://solana-foundation.github.io/solana-web3.js/](https://solana-foundation.github.io/solana-web3.js/)
+3. [https://docs.ton.org/v3/guidelines/quick-start/getting-started](https://docs.ton.org/v3/guidelines/quick-start/getting-started)
