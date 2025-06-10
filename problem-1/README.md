@@ -33,15 +33,25 @@ pnpm install
 pnpm test
 ```
 
-The command will run a test case showing how to use the implemented `swapExactTokensForTokens`
+The command will run test cases showing:
 
-1. Call `swapExactTokensForTokens` with correct arguments and expect the returned `amounts` to be valid.
-2. Call `swapExactTokensForTokens` with extremely high `amountOutMin` and expect `UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT` error.
-3. Call `swapExactTokensForTokens` with correct arguments and manually use the `tx.data` to sign.
+1. How to use the `swapExactTokensForTokens`?
+
+- Call `swapExactTokensForTokens` with correct arguments and expect the returned `amounts` to be valid.
+- Call `swapExactTokensForTokens` with extremely high `amountOutMin` and expect `UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT` error.
+- Call `swapExactTokensForTokens` with correct arguments and manually use the `tx.data` to sign.
+
+2. How to use the `addLiquidity`?
+
+- Call `addLiquidity` with correct arguments and expect the returned `amountA` and `amountB` to be valid.
+
+3. How to use the `removeLiquidity`?
+
+- Not implemented yet.
 
 ## Justification
 
-Although the task is named Transaction Simulation, the requirement askes for developing a function that calculates outputs based on the current contract states and protocol understaning. Therefore, instead of using `simulateTransaction`, which is available in `web3js`, `etherjs`, and `viem`, I'll build a custom function to assess a `swapExactTokensForTokens` for Uniswap V2 on the pool of ETH-USDT.
+Although the task is named Transaction Simulation, the requirement askes for developing a function that calculates outputs based on the current contract states and protocol understaning. Therefore, instead of using `simulateTransaction`, which is available in `web3js`, `etherjs`, and `viem`, I'll build a custom function to assess `swapExactTokensForTokens`, `addLiquidity`, and `removeLiquidity` for Uniswap V2 on the pool of ETH-USDT.
 
 ### (1) Transaction Simulation
 
@@ -60,6 +70,8 @@ await this.contract.simulate.swapExactTokensForTokens([
 ```
 
 The function `swapExactTokensForTokens` in `uniswapRouter.ts` returns `result.simulation` containing the detailed output of a swap.
+
+> Similar implementation to `addLiquidity` and `removeLiquidity`.
 
 ### (2) Transaction Data Generation
 
@@ -96,6 +108,8 @@ const signedTx = await account.signTransaction({
   type: 'eip1559',
 })
 ```
+
+> Similar implementation to `addLiquidity` and `removeLiquidity`.
 
 ## References
 

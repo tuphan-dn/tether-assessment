@@ -20,7 +20,7 @@ import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts'
 chai.use(chaiAsPromised)
 const expect = chai.expect
 
-describe('Swap on Uniswap V2', () => {
+describe('Swap in Uniswap V2', () => {
   let account: LocalAccount
   let client: PublicClient
   let router: UniswapRouter
